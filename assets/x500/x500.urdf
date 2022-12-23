@@ -5,28 +5,28 @@
     <child link="x500-Base__rotor_0"/>
     <origin xyz="0.174 -0.174  0.3" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
   </joint>
   <joint name="x500-Base__rotor_1_joint" type="revolute">
     <parent link="x500-Base__base_link"/>
     <child link="x500-Base__rotor_1"/>
     <origin xyz="-0.174  0.174  0.3" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
   </joint>
   <joint name="x500-Base__rotor_2_joint" type="revolute">
     <parent link="x500-Base__base_link"/>
     <child link="x500-Base__rotor_2"/>
     <origin xyz="0.174 0.174 0.3" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
   </joint>
   <joint name="x500-Base__rotor_3_joint" type="revolute">
     <parent link="x500-Base__base_link"/>
     <child link="x500-Base__rotor_3"/>
     <origin xyz="-0.174 -0.174  0.3" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
   </joint>
   <link name="x500-Base__base_link">
     <inertial>
