@@ -7,6 +7,7 @@ from isaacgym.torch_utils import *
 import math
 import torch
 import random 
+import PID
 import numpy as np
 
 # acquire gym interface
@@ -139,9 +140,11 @@ while not gym.query_viewer_has_closed(viewer):
     # step the physics
     gym.simulate(sim)
     gym.refresh_actor_root_state_tensor(sim)
-    print(marker_positions)
     
     gym.refresh_dof_state_tensor(sim)
+
+    # distance between marker and drone
+    dist = (marker_positions - drone_positions)
 
     # Deploy actions
     # update viewer
@@ -149,6 +152,16 @@ while not gym.query_viewer_has_closed(viewer):
     gym.draw_viewer(viewer, sim, True)
     gym.sync_frame_time(sim)
    
+def PID_controller():
+    pid_target = 
+    P = 10
+    I = 1
+    D = 1
+
+    pid = PID.PID(P, I, D)
+    pid.SetPoint = pid_target
+    pid.setSampleTime(1)
+
 # cleanup
 gym.destroy_viewer(viewer)
 gym.destroy_sim(sim)
